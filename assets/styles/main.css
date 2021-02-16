@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; }
+
+input:focus, input:checked, input:active, input:hover, textarea:focus, textarea:checked, textarea:active, textarea:hover {
+  outline: none;
+  outline-offset: none;
+  cursor: pointer; }
+
+.container {
+  max-width: 67.7436164669%;
+  padding: 0 10px;
+  margin: 0 auto; }
+  .container .form__content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 20px;
+    padding: 50px 0; }
+    .container .form__content .input {
+      display: flex;
+      flex-direction: column; }
+      .container .form__content .input .title {
+        font-size: 0.875em;
+        margin-bottom: 20px; }
+        .container .form__content .input .title .red {
+          color: red; }
+      .container .form__content .input .radiobuttons {
+        display: grid;
+        width: 310px;
+        grid-template-columns: repeat(6, 1fr);
+        justify-items: start;
+        grid-row-gap: 12px;
+        font-size: 0.75em; }
+        .container .form__content .input .radiobuttons .radiobtn {
+          display: flex;
+          align-items: center;
+          position: relative; }
+          .container .form__content .input .radiobuttons .radiobtn input {
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0; }
+          .container .form__content .input .radiobuttons .radiobtn span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border: 1px solid #000000;
+            margin-right: 5px;
+            position: relative;
+            display: grid; }
+          .container .form__content .input .radiobuttons .radiobtn span::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            background-color: #000000;
+            position: absolute;
+            justify-self: center;
+            align-self: center;
+            visibility: hidden; }
+          .container .form__content .input .radiobuttons .radiobtn input:checked + span:before {
+            visibility: visible; }
+
+/*# sourceMappingURL=main.css.map */

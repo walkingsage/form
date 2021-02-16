@@ -1,0 +1,102 @@
+@import "fonts.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    @include sans;
+    @include regular;
+}
+
+input:focus,input:checked,input:active,input:hover,textarea:focus,textarea:checked,textarea:active,textarea:hover{
+    outline: none;
+    outline-offset: none;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1300px/1919px*100%;
+    padding: 0 10px;
+    margin: 0 auto;
+
+    .form__content{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 20px;
+        padding: 50px 0;
+
+        .input{
+            display: flex;
+            flex-direction: column;
+
+            .title{
+                font-size: 14px/16px*1em;
+                margin-bottom: 20px;
+
+                .red{
+                    color: red;
+                }
+            }
+            .radiobuttons{
+                display: grid;
+                width: 310px;
+                grid-template-columns: repeat(6,1fr);
+                justify-items: start;
+                grid-row-gap: 12px;
+                font-size: 12px/16px*1em;
+
+                .radiobtn{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+
+                    input{
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        opacity: 0;
+                    }
+
+                    span{
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        border: 1px solid #000000;
+                        margin-right: 5px;
+                        position: relative;
+                        display: grid;
+
+                    }
+
+                    span::before{
+                        content: "";
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        background-color: #000000;
+                        position: absolute;
+                        justify-self: center;
+                        align-self: center;
+                        visibility: hidden;
+                    }
+
+                    input:checked + span:before{
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

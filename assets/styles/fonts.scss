@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
+
+
+@mixin sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin mons {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin regular {
+    font-weight: 400;
+}
